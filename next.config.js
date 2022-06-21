@@ -26,11 +26,11 @@ module.exports = {
 		** - WEBSITE_DESCRIPTION is used in the meta tags
 		** - PROJECT_GITHUB_URL should be the link to your project on GitHub
 		**********************************************************************/
-		WEBSITE_URI: 'https://macarena.finance/',
+		WEBSITE_URI: 'https://valuts.degendwarfs.io/',
 		WEBSITE_NAME: 'Dwarf Vaults',
 		WEBSITE_TITLE: 'Dwarf Vaults',
 		WEBSITE_DESCRIPTION: 'Dwarf vaults, a UI for Yearn Finance that you actually want to fork',
-		PROJECT_GITHUB_URL: 'https://github.com/yearn/macarena-finance',
+		PROJECT_GITHUB_URL: 'https://github.com/DegenDwarfs/DwarfVaults',
 
 		/* 🔵 - Yearn Finance **************************************************
 		** Some config used to control the behaviour of the web library. By
