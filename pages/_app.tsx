@@ -168,13 +168,13 @@ function	AppHead(): ReactElement {
 							url: `${process.env.WEBSITE_URI}og.png`,
 							width: 1200,
 							height: 675,
-							alt: 'Macarena'
+							alt: 'DwarfVaults'
 						}
 					]
 				}}
 				twitter={{
-					handle: '@iearnfinance',
-					site: '@iearnfinance',
+					handle: '@degendwarfs',
+					site: '@degendwarfs',
 					cardType: 'summary_large_image'
 				}} />
 		</>
