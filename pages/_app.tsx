@@ -221,7 +221,7 @@ function	AppWrapper(props: AppProps): ReactElement {
 		keywords: 'github code',
 		section: 'Social',
 		icon: <SocialGithub className={'w-9 h-9'} />,
-		perform: async (): Promise<unknown> => window.open('https://github.com/yearn', '_blank')
+		perform: async (): Promise<unknown> => window.open('https://github.com/degendwarfs', '_blank')
 	},
 	{
 		id: 'twitterAction',
@@ -230,7 +230,7 @@ function	AppWrapper(props: AppProps): ReactElement {
 		keywords: 'social contact dm',
 		section: 'Social',
 		icon: <SocialTwitter className={'w-9 h-9'} />,
-		perform: async (): Promise<unknown> => window.open('https://twitter.com/iearnfinance', '_blank')
+		perform: async (): Promise<unknown> => window.open('https://twitter.com/degendwarfs', '_blank')
 	},
 	{
 		id: 'discordAction',
@@ -239,7 +239,7 @@ function	AppWrapper(props: AppProps): ReactElement {
 		keywords: 'discord',
 		section: 'Social',
 		icon: <SocialDiscord className={'w-9 h-9'} />,
-		perform: async (): Promise<unknown> => window.open('https://discord.yearn.finance', '_blank')
+		perform: async (): Promise<unknown> => window.open('http://discord.degendwarfs.io', '_blank')
 	}];
 
 	return (
