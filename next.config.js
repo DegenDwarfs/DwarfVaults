@@ -27,9 +27,9 @@ module.exports = {
 		** - PROJECT_GITHUB_URL should be the link to your project on GitHub
 		**********************************************************************/
 		WEBSITE_URI: 'https://macarena.finance/',
-		WEBSITE_NAME: 'Macarena Finance',
-		WEBSITE_TITLE: 'Macarena Finance',
-		WEBSITE_DESCRIPTION: 'Macarena finance, a UI for Yearn Finance that you actually want to fork',
+		WEBSITE_NAME: 'Dwarf Vaults',
+		WEBSITE_TITLE: 'Dwarf Vaults',
+		WEBSITE_DESCRIPTION: 'Dwarf vaults, a UI for Yearn Finance that you actually want to fork',
 		PROJECT_GITHUB_URL: 'https://github.com/yearn/macarena-finance',
 
 		/* 🔵 - Yearn Finance **************************************************
