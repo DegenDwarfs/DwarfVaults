@@ -1,6 +1,6 @@
 {
-    "name": "Macarena Finance",
-    "short_name": "Macarena",
+    "name": "DwarfVaults UI for Yearn Vaults",
+    "short_name": "DwarfVaults",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
