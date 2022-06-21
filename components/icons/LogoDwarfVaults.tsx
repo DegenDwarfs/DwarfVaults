@@ -1,6 +1,6 @@
 import	React, {ReactElement}		from	'react';
 
-function	LogoMacarena(props: React.SVGProps<SVGSVGElement>): ReactElement {
+function	LogoDwarfVaults(props: React.SVGProps<SVGSVGElement>): ReactElement {
 	return (
 		<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="187.5.000000pt" height="65.000000pt" viewBox="0 0 1000.000000 350.000000"
@@ -217,5 +217,5 @@ c0 -11 -2 -20 -4 -20 -2 0 -6 9 -9 20 -3 11 -1 20 4 20 5 0 9 -9 9 -20z"/>
 	);
 }
 
-export default LogoMacarena;
+export default LogoDwarfVaults;
 

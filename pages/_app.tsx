@@ -10,11 +10,11 @@ import	{KBarProvider, Action, createAction, useRegisterActions}	from	'kbar';
 import	{useWeb3, WithYearn}										from	'@yearn-finance/web-lib/contexts';
 import	{Dropdown}													from	'@yearn-finance/web-lib/components';
 import	{truncateHex}												from	'@yearn-finance/web-lib/utils';
-import	{NetworkEthereum, NetworkFantom, SocialDiscord, SocialGithub, SocialTwitter}				from	'@yearn-finance/web-lib/icons';
+import	{NetworkEthereum, NetworkArbitrum, NetworkFantom, SocialDiscord, SocialGithub, SocialTwitter}				from	'@yearn-finance/web-lib/icons';
 import	useYearn, {YearnContextApp}									from	'contexts/useYearn';
 import	KBar														from	'components/Kbar';
 import	KBarButton													from	'components/KBarButton';
-import	LogoMacarena												from	'components/icons/LogoMacarena';
+import	DwarfVaultLogo												from	'components/icons/LogoDwarfVaults';
 
 import	'../style.css';
 
@@ -33,7 +33,8 @@ type TDropdownOption = {
 function	Header(): ReactElement {
 	const	options: TDropdownOption[] = [
 		{icon: <NetworkEthereum />, label: 'Ethereum', value: 1},
-		{icon: <NetworkFantom />, label: 'Fantom', value: 250}
+		{icon: <NetworkFantom />, label: 'Fantom', value: 250},
+		{icon: <NetworkArbitrum />, label: 'Arbitrum', value: 42161}
 	];
 
 	const	{chainID, onSwitchChain, isActive, address, ens, openLoginModal, onDesactivate} = useWeb3();
@@ -68,7 +69,7 @@ function	Header(): ReactElement {
 						<div aria-label={'logo'} className={'flex col-span-3 justify-center items-center md:col-span-1'}>
 							<Link href={'/'}>
 								<div>
-									<LogoMacarena className={'cursor-pointer'} />
+									<DwarfVaultLogo className={'cursor-pointer'} />
 								</div>
 							</Link>
 						</div>
