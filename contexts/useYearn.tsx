@@ -19,7 +19,7 @@ export const YearnContextApp = ({children}: {children: ReactElement}): ReactElem
 
 	const getYearnVaults = React.useCallback(async (): Promise<void> => {
 		NProgress.start();
-		const	networkData = networks[chainID === 1337 ? 1 : chainID || 1];
+		const	networkData = networks[chainID === 1337 ? 1 : chainID || 1 ];
 		const	[api, meta, tok, vs] = await Promise.allSettled([
 			axios.get(`${networkData.apiURI}/vaults/all`),
 			axios.get(`${networkData.metaURI}/strategies/all`),
@@ -66,7 +66,10 @@ export const YearnContextApp = ({children}: {children: ReactElement}): ReactElem
 				toAddress('0x718AbE90777F5B778B52D553a5aBaa148DD0dc5D'), //alETH
 				toAddress('0x790a60024bC3aea28385b60480f15a0771f26D09'), //yvCurve YFI/ETH
 				toAddress('0x1635b506a88fBF428465Ad65d00e8d6B6E5846C3'), //yvCurve CVX/ETH
-				toAddress('0x4560b99C904aAD03027B5178CCa81584744AC01f') // yvCurve CVX/CRV			
+				toAddress('0x4560b99C904aAD03027B5178CCa81584744AC01f'), // yvCurve CVX/CRV
+				toAddress('0xA74d4B67b3368E83797a35382AFB776bAAE4F5C8'), //alUSD
+				toAddress('0x5a770DbD3Ee6bAF2802D29a901Ef11501C44797A') //sUSD
+						
 			],
 			250 : [
 				toAddress('0x0DEC85e74A92c52b7F708c4B10207D9560CEFaf0'), //yvWFTM
@@ -75,6 +78,10 @@ export const YearnContextApp = ({children}: {children: ReactElement}): ReactElem
 				toAddress('0x1e2fe8074a5ce1Bb7394856B0C618E75D823B93b'), //fBEET				
 				toAddress('0xCbCaF8cB8cbeAFA927ECEE0c5C56560F83E9B7D9'), //yvCurve TriCrypto
 				toAddress('0xA97E7dA01C7047D6a65f894c99bE8c832227a8BC')	//yv3Pool
+			],
+			42161 : [
+				toAddress('0x239e14A19DFF93a17339DCC444f74406C17f8E67'), //yvCurve MIM				
+				toAddress('0x1dBa7641dc69188D6086a73B972aC4bda29Ec35d')	//yvCurve TriCrypto
 			]
 		};
 		vaults = vaults.filter((vault: TVaultAPI): boolean => {
@@ -169,13 +176,17 @@ export const YearnContextApp = ({children}: {children: ReactElement}): ReactElem
 				if(toAddress(vault.address) === toAddress('0xE537B5cc158EB71037D4125BDD7538421981E6AA'))
 					vault.categories = ['simple_saver', 'blue_chip'];	
 				if(toAddress(vault.address) === toAddress('0x718AbE90777F5B778B52D553a5aBaa148DD0dc5D'))
-					vault.categories = ['usd_stable'];
+					vault.categories = ['simple_saver'];
 				if(toAddress(vault.address) === toAddress('0x790a60024bC3aea28385b60480f15a0771f26D09'))
 					vault.categories = ['simple_saver','blue_chip'];
 				if(toAddress(vault.address) === toAddress('0x1635b506a88fBF428465Ad65d00e8d6B6E5846C3'))
 					vault.categories = ['simple_saver','blue_chip'];	
 				if(toAddress(vault.address) === toAddress('0x4560b99C904aAD03027B5178CCa81584744AC01f'))
-					vault.categories = ['simple_saver','blue_chip'];																																					
+					vault.categories = ['simple_saver','blue_chip'];	
+				if(toAddress(vault.address) === toAddress('0xA74d4B67b3368E83797a35382AFB776bAAE4F5C8'))
+					vault.categories = ['usd_stable'];	
+				if(toAddress(vault.address) === toAddress('0x5a770DbD3Ee6bAF2802D29a901Ef11501C44797A'))
+					vault.categories = ['usd_stable'];																																																
 			} else if (chainID === 250) {
 				if (toAddress(vault.address) === toAddress('0x0DEC85e74A92c52b7F708c4B10207D9560CEFaf0')) //yvWFTM
 					vault.categories = ['simple_saver', 'blue_chip'];
@@ -186,11 +197,18 @@ export const YearnContextApp = ({children}: {children: ReactElement}): ReactElem
 				if(toAddress(vault.address) === toAddress('0x1e2fe8074a5ce1Bb7394856B0C618E75D823B93b')) //fBEET
 					vault.categories = ['simple_saver'];					
 				if(toAddress(vault.address) === toAddress('0xCbCaF8cB8cbeAFA927ECEE0c5C56560F83E9B7D9')) //yvCurveTricrypto
-					vault.categories = ['simple_saver'];
+					vault.categories = ['simple_saver','blue_chip'];
 				if(toAddress(vault.address) === toAddress('0xA97E7dA01C7047D6a65f894c99bE8c832227a8BC'))
 					vault.categories = ['simple_saver', 'usd_stable'];
 			
+			} else if (chainID === 42161) {
+				if(toAddress(vault.address) === toAddress('0x239e14A19DFF93a17339DCC444f74406C17f8E67'))
+					vault.categories = ['simple_saver', 'blue_chip'];	
+				if(toAddress(vault.address) === toAddress('0x1dBa7641dc69188D6086a73B972aC4bda29Ec35d'))
+					vault.categories = ['simple_saver','usd_stable'];							
+												
 			}
+
 			_vaults.push(vault);
 		}
 
