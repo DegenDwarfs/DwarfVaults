@@ -29,7 +29,7 @@ module.exports = {
 		WEBSITE_URI: 'https://valuts.degendwarfs.io/',
 		WEBSITE_NAME: 'Dwarf Vaults',
 		WEBSITE_TITLE: 'Dwarf Vaults',
-		WEBSITE_DESCRIPTION: 'Dwarf vaults, a UI for Yearn Finance that you actually want to fork',
+		WEBSITE_DESCRIPTION: 'Dwarf vaults, a UI forked from Macarena.finance',
 		PROJECT_GITHUB_URL: 'https://github.com/DegenDwarfs/DwarfVaults',
 
 		/* 🔵 - Yearn Finance **************************************************
